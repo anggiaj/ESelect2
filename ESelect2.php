@@ -39,12 +39,12 @@ class ESelect2 extends CInputWidget
       echo CHtml::dropDownList($this->name,$this->value,$this->data,$this->htmlOptions);
     }
     
-    $bu=Yii::app()->assetManager->publish(dirname(__FILE__).'/assets/select2-2.1');
+    $bu=Yii::app()->assetManager->publish(dirname(__FILE__).'/assets/');
     $cs=Yii::app()->clientScript;
     $cs->registerCssFile($bu.'/select2.css');
     
     if($this->scriptPosition===null) $this->scriptPosition=$cs->coreScriptPosition;
-    $cs->registerScriptFile($bu.'/select2.min.js',$this->scriptPosition);
+    $cs->registerScriptFile($bu.'/select2.js',$this->scriptPosition);
     
     
     $options=$this->options?CJavaScript::encode($this->options):'';
