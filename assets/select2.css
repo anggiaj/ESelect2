@@ -1,5 +1,5 @@
 /*
-Version: @@ver@@ Timestamp: @@timestamp@@
+Version: 3.0 Timestamp: Tue Jul 31 21:09:16 PDT 2012
 */
 .select2-container {
     position: relative;
@@ -9,8 +9,6 @@ Version: @@ver@@ Timestamp: @@timestamp@@
     *display: inline;
 
 }
-
-
 
 .select2-container,
 .select2-drop,
@@ -56,7 +54,6 @@ Version: @@ver@@ Timestamp: @@timestamp@@
     text-decoration: none;
 }
 
-<<<<<<< HEAD
 .select2-container.select2-drop-above .select2-choice
 {
     border-bottom-color: #aaa;
@@ -72,8 +69,6 @@ Version: @@ver@@ Timestamp: @@timestamp@@
     background-image: linear-gradient(top, #eeeeee 0%,#ffffff 90%);
 }
 
-=======
->>>>>>> 9f4a46199ac020c98ae5e2197436caca4e0e8178
 .select2-container .select2-choice span {
     margin-right: 26px;
     display: block;
@@ -105,6 +100,7 @@ Version: @@ver@@ Timestamp: @@timestamp@@
 
 .select2-drop {
     background: #fff;
+    color: #000;
     border: 1px solid #aaa;
     border-top: 0;
     position: absolute;
@@ -113,11 +109,7 @@ Version: @@ver@@ Timestamp: @@timestamp@@
     -moz-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
     -o-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
     box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
-<<<<<<< HEAD
     z-index: 9999;
-=======
-    z-index: 999;
->>>>>>> 9f4a46199ac020c98ae5e2197436caca4e0e8178
     width:100%;
     margin-top:-1px;
 
@@ -126,7 +118,6 @@ Version: @@ver@@ Timestamp: @@timestamp@@
   border-radius: 0 0 4px 4px;
 }
 
-<<<<<<< HEAD
 .select2-drop.select2-drop-above {
     -webkit-border-radius: 4px 4px 0px 0px;
     -moz-border-radius: 4px 4px 0px 0px;
@@ -141,8 +132,6 @@ Version: @@ver@@ Timestamp: @@timestamp@@
     box-shadow: 0 -4px 5px rgba(0, 0, 0, .15);
 }
 
-=======
->>>>>>> 9f4a46199ac020c98ae5e2197436caca4e0e8178
 .select2-container .select2-choice div {
     -webkit-border-radius: 0 4px 4px 0;
     -moz-border-radius: 0 4px 4px 0;
@@ -177,11 +166,7 @@ Version: @@ver@@ Timestamp: @@timestamp@@
 .select2-search {
   display: inline-block;
     white-space: nowrap;
-<<<<<<< HEAD
     z-index: 10000;
-=======
-    z-index: 1010;
->>>>>>> 9f4a46199ac020c98ae5e2197436caca4e0e8178
   min-height: 26px;
   width: 100%;
   margin: 0;
@@ -220,14 +205,11 @@ Version: @@ver@@ Timestamp: @@timestamp@@
     -webkit-border-radius: 0;
 }
 
-<<<<<<< HEAD
 .select2-drop.select2-drop-above .select2-search input
 {
     margin-top:4px;
 }
 
-=======
->>>>>>> 9f4a46199ac020c98ae5e2197436caca4e0e8178
 .select2-search input.select2-active {
     background: #fff url('spinner.gif') no-repeat 100%;
     background: url('spinner.gif') no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
@@ -312,12 +294,7 @@ Version: @@ver@@ Timestamp: @@timestamp@@
 }
 
 .select2-results .select2-result-label {
-<<<<<<< HEAD
   padding: 3px 7px 4px;
-=======
-  line-height: 80%;
-  padding: 7px 7px 8px;
->>>>>>> 9f4a46199ac020c98ae5e2197436caca4e0e8178
   margin: 0;
   cursor: pointer;
 }
@@ -334,6 +311,11 @@ Version: @@ver@@ Timestamp: @@timestamp@@
   background: transparent;
 }
 .select2-results .select2-no-results {
+  background: #f4f4f4;
+  display: list-item;
+}
+
+.select2-results .select2-selection-limit {
   background: #f4f4f4;
   display: list-item;
 }
@@ -439,12 +421,9 @@ disabled look for already selected choices in the results dropdown
   box-shadow        : none;
 }
 
-<<<<<<< HEAD
 .select2-container-multi .select2-choices .select2-search-field input.select2-active {
     background: #fff url('spinner.gif') no-repeat 100% !important;
 }
-=======
->>>>>>> 9f4a46199ac020c98ae5e2197436caca4e0e8178
 
 .select2-default {
   color: #999 !important;
@@ -528,12 +507,8 @@ disabled look for already selected choices in the results dropdown
 }
 /* end multiselect */
 
-<<<<<<< HEAD
 .select2-result-selectable .select2-match,
 .select2-result-unselectable .select2-result-selectable .select2-match { text-decoration: underline; }
 .select2-result-unselectable .select2-match { text-decoration: none; }
 
 .select2-offscreen { position: absolute; left: -10000px; }
-=======
-.select2-match { text-decoration: underline; }
->>>>>>> 9f4a46199ac020c98ae5e2197436caca4e0e8178

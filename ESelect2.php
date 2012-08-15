@@ -57,8 +57,10 @@ class ESelect2 extends CInputWidget
     $cs->registerCssFile($bu.'/select2.css');
     
     if($this->scriptPosition===null) $this->scriptPosition=$cs->coreScriptPosition;
-    $cs->registerScriptFile($bu.'/select2.js',$this->scriptPosition);
-    
+    if(YII_DEBUG)
+      $cs->registerScriptFile($bu.'/select2.js',$this->scriptPosition);
+    else
+      $cs->registerScriptFile($bu.'/select2.min.js',$this->scriptPosition);
     
     $options=$this->options?CJavaScript::encode($this->options):'';
     $cs->registerScript(__CLASS__.'#'.$this->id,"jQuery('{$this->selector}').select2({$options});");
