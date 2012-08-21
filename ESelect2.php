@@ -40,6 +40,22 @@ class ESelect2 extends CInputWidget
         if(isset($this->options['placeholder'])) $data['']='';
         $this->data=$data+$this->data;  
       }
+
+	  if (!isset($this->options['formatNoMatches'])) {
+		  $this->options['formatNoMatches'] = 'js:function(){return "'.Yii::t('ESelect2.select2','No matches found').'";}';
+	  }
+	  if (!isset($this->options['formatInputTooShort'])) {
+		  $this->options['formatInputTooShort'] = 'js:function(input,min){return "'.Yii::t('ESelect2.select2','Please enter {chars} more characters', array('{chars}'=>'"+(min-input.length)+"')).'";}';
+	  }
+	  if (!isset($this->options['formatSelectionTooBig'])) {
+		  $this->options['formatSelectionTooBig'] = 'js:function(limit){return "'.Yii::t('ESelect2.select2','You can only select {count} items', array('{count}'=>'"+limit+"')).'";}';
+	  }
+	  if (!isset($this->options['formatLoadMore'])) {
+		  $this->options['formatLoadMore'] = 'js:function(pageNumber){return "'.Yii::t('ESelect2.select2','Loading more results...').'";}';
+	  }
+	  if (!isset($this->options['formatSearching'])) {
+		  $this->options['formatSearching'] = 'js:function(){return "'.Yii::t('ESelect2.select2','Searching...').'";}';
+	  }
       
       if($this->hasModel())
       {
