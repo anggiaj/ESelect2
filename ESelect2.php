@@ -16,10 +16,6 @@ class ESelect2 extends CInputWidget
    */
   public $data=array();
   /**
-   * @var integer Script position
-   */
-  public $scriptPosition=null;
-  /**
    * @var string Html element selector
    */
   public $selector;
@@ -71,12 +67,11 @@ class ESelect2 extends CInputWidget
     $bu=Yii::app()->assetManager->publish(dirname(__FILE__).'/assets/');
     $cs=Yii::app()->clientScript;
     $cs->registerCssFile($bu.'/select2.css');
-    
-    if($this->scriptPosition===null) $this->scriptPosition=$cs->coreScriptPosition;
+
     if(YII_DEBUG)
-      $cs->registerScriptFile($bu.'/select2.js',$this->scriptPosition);
+      $cs->registerScriptFile($bu.'/select2.js');
     else
-      $cs->registerScriptFile($bu.'/select2.min.js',$this->scriptPosition);
+      $cs->registerScriptFile($bu.'/select2.min.js');
     
     $options=$this->options?CJavaScript::encode($this->options):'';
     $cs->registerScript(__CLASS__.'#'.$this->id,"jQuery('{$this->selector}').select2({$options});");
