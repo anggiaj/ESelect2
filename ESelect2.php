@@ -4,6 +4,7 @@
  * Wrapper for ivaynberg jQuery select2 (https://github.com/ivaynberg/select2)
  * 
  * @author Anggiajuang Patria <anggiaj@gmail.com>
+ * @link http://git.io/Mg_a-w
  * @license http://www.opensource.org/licenses/apache2.0.php
  */
 class ESelect2 extends CInputWidget
