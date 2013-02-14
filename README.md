@@ -1,4 +1,3 @@
-
 ESelect2 is a widget extension for Yii framework. This extension is a wrapper for Select2 Jquery plugin ([https://github.com/ivaynberg/select2][1]).
 
 ## Requirements ##
@@ -59,14 +58,14 @@ $data = array(
 		'3' => 'Tiga',
 	),
 	'two' => array(
-		'1' => 'Sidji',
-		'2' => 'Loro',
-		'3' => 'Telu',
+		'4' => 'Sidji',
+		'5' => 'Loro',
+		'6' => 'Telu',
 	),
 	'three' => array(
-		'1' => 'Hiji',
-		'2' => 'Dua',
-		'2' => 'Tilu',
+		'7' => 'Hiji',
+		'8' => 'Dua',
+		'9' => 'Tilu',
 	),
 );
 
