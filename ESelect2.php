@@ -29,6 +29,11 @@ class ESelect2 extends CInputWidget
      * @var array javascript event handlers
      */
     public $events = array();
+
+	/**
+	 * @var boolean should the items of a multiselect list be sortable using jQuery UI
+	 */
+	public $sortable = false;
     
     protected $defaultOptions = array();
 
@@ -77,13 +82,27 @@ class ESelect2 extends CInputWidget
         else
             $cs->registerScriptFile($bu . '/select2.min.js');
 
+		if ($this->sortable) {
+			$cs->registerCoreScript('jquery.ui');
+		}
+
         $options = CJavaScript::encode(CMap::mergeArray($this->defaultOptions, $this->options));
         ob_start();
         echo "jQuery('{$this->selector}').select2({$options})";
         foreach ($this->events as $event => $handler)
             echo ".on('{$event}', " . CJavaScript::encode($handler) . ")";
+		echo ';';
+		if ($this->sortable) {
+			echo <<<JavaScript
+jQuery('{$this->selector}').select2("container").find("ul.select2-choices").sortable({
+	containment: 'parent',
+	start: function() { jQuery('{$this->selector}').select2("onSortStart"); },
+	update: function() { jQuery('{$this->selector}').select2("onSortEnd"); }
+});
+JavaScript;
+		}
 
-        $cs->registerScript(__CLASS__ . '#' . $this->id, ob_get_clean() . ';');
+        $cs->registerScript(__CLASS__ . '#' . $this->id, ob_get_clean());
         
     }
 
