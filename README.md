@@ -151,15 +151,14 @@ $this->widget('ext.select2.ESelect2', array(
 ## Resources ##
 
  - Jquery extension URL:
- - [https://github.com/ivaynberg/select2][2]
- - Demo [http://ivaynberg.github.com/select2/][3]
+ - [https://github.com/ivaynberg/select2][1]
+ - Demo [http://ivaynberg.github.com/select2/][2]
  - Yii extension URL:
- - [http://www.yiiframework.com/extension/select2/][5]
- - [https://github.com/anggiaj/ESelect2][5]
+ - [http://www.yiiframework.com/extension/select2/][3]
+ - [https://github.com/anggiaj/ESelect2][4]
 
 
   [1]: https://github.com/ivaynberg/select2
-  [2]: https://github.com/ivaynberg/select2
-  [3]: http://ivaynberg.github.com/select2/
-  [4]: http://www.yiiframework.com/extension/select2/
-  [5]: https://github.com/anggiaj/ESelect2
+  [2]: http://ivaynberg.github.com/select2/
+  [3]: http://www.yiiframework.com/extension/select2/
+  [4]: https://github.com/anggiaj/ESelect2
