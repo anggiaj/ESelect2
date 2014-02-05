@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Wrapper for ivaynberg jQuery select2 (https://github.com/ivaynberg/select2)
  * 
