@@ -64,12 +64,22 @@ class ESelect2 extends CInputWidget
                 $this->data = $data + $this->data;
             }
 
-            if ($this->hasModel()) {
-                echo CHtml::activeDropDownList($this->model, $this->attribute, $this->data, $this->htmlOptions);
-            } elseif(!isset($this->options['ajax'])) {
+            
+            if ($this->hasModel())
+            {
+                if (isset($this->options['ajax']))
+                    echo CHtml::activeHiddenField($this->model, $this->attribute, $this->htmlOptions);
+                else
+                    echo CHtml::activeDropDownList($this->model, $this->attribute, $this->data, $this->htmlOptions);
+
+            }
+            elseif (!isset($this->options['ajax']))
+            {
                 $this->htmlOptions['id'] = $this->id;
                 echo CHtml::dropDownList($this->name, $this->value, $this->data, $this->htmlOptions);
-            } else {
+            }
+            else
+            {
                 echo CHtml::hiddenField($this->name, $this->value, $this->htmlOptions);
             }
         }
